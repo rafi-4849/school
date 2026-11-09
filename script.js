@@ -1,4 +1,4 @@
-// Greenfield Public School homepage interactions
+// Delhi Public School Muzaffarpur homepage interactions
 
 const menuToggle = document.getElementById('menuToggle');
 const mainNav = document.getElementById('mainNav');
@@ -72,6 +72,12 @@ admissionForm.addEventListener('submit', (event) => {
   }
 
   const parentName = document.getElementById('parentName').value.trim();
-  formMessage.textContent = `Thank you, ${parentName}. Your enquiry is ready. Connect this form to your school email or backend to receive submissions.`;
+  const studentName = document.getElementById('studentName').value.trim();
+  const grade = document.getElementById('grade').value;
+  const phone = document.getElementById('phone').value.trim();
+  const message = `Hello, I am interested in admission at Delhi Public School Muzaffarpur.\nParent/Guardian: ${parentName}\nStudent: ${studentName}\nApplying for: ${grade}\nContact number: ${phone}\nPlease share the admission details.`;
+  const whatsappUrl = `https://wa.me/917488737825?text=${encodeURIComponent(message)}`;
+  window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+  formMessage.textContent = 'Your admission enquiry has been prepared in WhatsApp. Please send the message to complete your enquiry.';
   admissionForm.reset();
 });
