@@ -413,3 +413,43 @@ button, input, select { font: inherit; }
   .whatsapp-float, .whatsapp-tooltip { transition: none; }
 }
 
+
+
+/* Featured event poster: AI Impact Summit Bharat 2026 */
+.event-spotlight-section { background: #f3f5ef; }
+.event-spotlight-heading { display: flex; align-items: end; justify-content: space-between; gap: 25px; margin-bottom: 38px; }
+.event-spotlight-heading h2 { margin: 13px 0 0; color: var(--green); font: 600 clamp(34px, 4vw, 52px)/1.12 var(--serif); letter-spacing: -.035em; }
+.event-spotlight-heading h2 em { color: #76945d; font-weight: 600; }
+.event-archive-label { flex: 0 0 auto; display: inline-flex; align-items: center; gap: 8px; padding: 10px 13px; border: 1px solid #d5dfcf; color: #647d56; font-size: 9px; font-weight: 800; letter-spacing: .13em; }
+.event-archive-label::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #8aa271; }
+.event-spotlight-card { display: grid; grid-template-columns: minmax(270px, .85fr) 1.15fr; gap: clamp(28px, 5vw, 70px); align-items: center; padding: clamp(22px, 4vw, 48px); background: #fff; border: 1px solid #e2e8dc; box-shadow: 0 18px 55px rgba(22, 57, 39, .07); }
+.event-poster-link { position: relative; display: block; max-width: 460px; width: 100%; justify-self: center; background: #f7f7f4; line-height: 0; overflow: hidden; }
+.event-poster-link img { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: contain; transition: transform .35s ease; }
+.event-poster-link:hover img { transform: scale(1.025); }
+.poster-open-hint { position: absolute; right: 12px; bottom: 12px; padding: 9px 12px; color: #fff; background: rgba(14, 49, 39, .92); font-size: 10px; font-weight: 700; line-height: 1; }
+.event-spotlight-copy { max-width: 610px; }
+.event-kicker { color: #a66b24; font-size: 9px; font-weight: 800; letter-spacing: .17em; }
+.event-spotlight-copy h3 { margin: 13px 0 13px; color: var(--green); font: 600 clamp(27px, 3vw, 39px)/1.15 var(--serif); }
+.event-summary { margin: 0 0 23px; color: var(--muted); font-size: 13px; line-height: 1.8; }
+.event-speaker { display: flex; align-items: center; gap: 13px; margin: 0 0 23px; padding: 17px 0; border-top: 1px solid #e5ebe1; border-bottom: 1px solid #e5ebe1; }
+.speaker-icon { display: grid; width: 42px; height: 42px; flex: 0 0 42px; place-items: center; border-radius: 50%; color: #fff; background: var(--green); font-size: 19px; }
+.event-speaker div, .event-details-list > div > span:last-child { display: flex; flex-direction: column; gap: 3px; }
+.event-speaker small { color: #8b9b82; font-size: 8px; font-weight: 800; letter-spacing: .15em; }
+.event-speaker strong { color: var(--green); font-size: 14px; }
+.event-speaker div > span { color: var(--muted); font-size: 11px; }
+.event-details-list { display: grid; gap: 15px; margin-bottom: 25px; }
+.event-details-list > div { display: flex; align-items: center; gap: 13px; }
+.event-details-list > div > span:first-child { display: grid; width: 34px; height: 34px; flex: 0 0 34px; place-items: center; background: #edf2e8; color: #55734d; font-size: 17px; }
+.event-details-list strong { color: var(--green); font-size: 11px; }
+.event-details-list small { color: var(--muted); font-size: 10px; }
+.event-poster-button { display: inline-flex; }
+@media (max-width: 760px) {
+  .event-spotlight-heading { align-items: flex-start; flex-direction: column; margin-bottom: 25px; }
+  .event-spotlight-heading h2 { font-size: 37px; }
+  .event-spotlight-card { grid-template-columns: 1fr; gap: 28px; padding: 18px; }
+  .event-poster-link { max-width: 440px; }
+  .event-spotlight-copy { max-width: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .event-poster-link img { transition: none; }
+}
